@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IEEE Pune Section Student Congress 2026</title>
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body
+    class="bg-[#12031f] text-slate-100 font-sans selection:bg-amber-500 selection:text-[#12031f] relative overflow-x-hidden min-h-screen">
+
+    <!-- BACKGROUND GRADIENT GLOWS -->
+    <div class="fixed inset-0 pointer-events-none z-0">
+        <div
+            class="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-gradient-to-b from-cyan-600/20 via-blue-900/15 to-transparent blur-[140px] rounded-full">
+        </div>
+        <div class="absolute top-[35%] right-[-10%] w-[500px] h-[500px] bg-blue-600/10 blur-[150px] rounded-full">
+        </div>
+        <div class="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-sky-900/15 blur-[160px] rounded-full">
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="sticky top-0 z-40 backdrop-blur-md bg-[#1a062b]/80 border-b border-purple-900/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+
+            <!-- LOGO GROUP -->
+            <div class="flex items-center space-x-3">
+                <div class="flex items-center gap-3">
+                    <img src="images/ieee ps.png" alt="IEEE Pune Section" style="height: 75px !important;" />
+                    <div
+                        class="hidden sm:flex flex-col text-[10px] uppercase font-semibold text-purple-200 border-l border-purple-700/50 pl-2">
+                        <span>Student Congress</span>
+                        <span class="text-amber-400 font-bold">2026</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DESKTOP NAV -->
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#about" class="hover:text-amber-400 transition-colors">About</a>
+                <a href="#agenda" class="hover:text-amber-400 transition-colors">Agenda</a>
+                <a href="#tracks" class="hover:text-amber-400 transition-colors">Tracks</a>
+                <a href="#workshops" class="hover:text-amber-400 transition-colors">Workshops</a>
+                <a href="#origin-stories" class="hover:text-amber-400 transition-colors">Origin Stories</a>
+            </div>
+
+            <!-- REGISTER BUTTON -->
+            <div class="hidden md:flex items-center">
+                <button
+                    class="open-register-btn px-5 py-2.5 rounded-full bg-white/10 border border-white/20 text-white font-bold hover:bg-white/20 hover:border-white/30 transition duration-300 transform hover:-translate-y-0.5">
+                    Register Now
+                </button>
+            </div>
+
+            <!-- MOBILE MENU TOGGLE -->
+            <div class="md:hidden flex items-center gap-2">
+                <button
+                    class="open-register-btn px-3 py-1.5 text-xs rounded-full bg-amber-400 text-purple-950 font-bold">
+                    Register
+                </button>
+                <button id="mobile-menu-btn" class="p-2 text-purple-300 hover:text-white">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- MOBILE MENU DROPDOWN -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-[#1e0832] border-b border-purple-800/50 px-4 pt-2 pb-6 space-y-3">
+            <a href="#about"
+                class="mobile-nav-link block py-2 text-base font-medium border-b border-purple-900/40">About</a>
+            <a href="#agenda"
+                class="mobile-nav-link block py-2 text-base font-medium border-b border-purple-900/40">Agenda</a>
+            <a href="#tracks"
+                class="mobile-nav-link block py-2 text-base font-medium border-b border-purple-900/40">Parallel
+                Tracks</a>
+            <a href="#workshops"
+                class="mobile-nav-link block py-2 text-base font-medium border-b border-purple-900/40">Workshops</a>
+            <a href="#origin-stories"
+                class="mobile-nav-link block py-2 text-base font-medium border-b border-purple-900/40">Origin
+                Stories</a>
+        </div>
+    </nav>
+
+    <!-- PARTNER BANNER -->
+    <div class="partner-bar-container">
+        <div class="partner-bar">
+            <img src="images/1.jpg" alt="IEEE Pune Section" style="height: 75px !important;" />
+            <img src="images/5.jpg" alt="Congress" style="height: 85px !important;" />
+            <img src="images/2.jpg" alt="SAC" style="height: 90px !important;" />
+            <img src="images/7.jpg" alt="VIT SB" style="height: 80px !important;" />
+            <img src="images/4.jpg" alt="YP" style="height: 85px !important;" />
+            <img src="images/3.jpg" alt="VIT Pune" style="height: 75px !important;" />
+            <img src="images/6.jpg" alt="WIE" style="height: 85px !important;" />
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section
+        class="relative pt-0 pb-20 px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center justify-center min-h-[70vh]">
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-72 bg-gradient-to-r from-purple-600/20 via-pink-600/30 to-amber-500/20 blur-3xl pointer-events-none rounded-full">
+        </div>
+
+
+
+        <div class="flex flex-col items-center justify-center gap-1">
+            <!-- CUSTOM CONGRESS LOGO ARTWORK -->
+            <div class="relative mt-0 mb-0 py-0 w-full max-w-3xl px-18 flex justify-center">
+                <div class="logo-crop-wrapper"></div>
+                <img src="images/congress-logo.png" alt="Congress 2026" class="hero-logo-img" />
+            </div>
+
+            <!-- Subheading Group: Exact -2cm margin -->
+            <div class="text-center space-y-1 relative z-10 mb-6" style="margin-top: -2cm;">
+                <h2 class="text-xl md:text-2xl font-bold tracking-wide text-white uppercase">
+                    FROM INNOVATION TO IMPACT
+                </h2>
+                <p class="text-amber-400 italic text-sm md:text-base font-serif">
+                    "A STEP AHEAD, A STEP CLOSER TO VIKSIT BHARAT @ 2047"
+                </p>
+            </div>
+
+            <!-- Date/Venue Card -->
+            <div
+                class="w-full max-w-2xl bg-gradient-to-r from-purple-950/90 via-[#2a0b47]/90 to-purple-950/90 border border-amber-500/30 rounded-2xl p-4 sm:p-6 shadow-2xl backdrop-blur-md mb-8 grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
+                <div
+                    class="flex items-center space-x-3 border-b sm:border-b-0 sm:border-r border-purple-800/60 pb-3 sm:pb-0 sm:pr-4">
+                    <div class="p-3 bg-amber-500/20 rounded-xl text-amber-400 border border-amber-500/30">
+                        <i data-lucide="calendar"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs text-purple-300 uppercase tracking-wider">Date & Time</div>
+                        <div class="text-base font-bold text-white">31st OCTOBER 2026</div>
+                        <div class="text-xs text-amber-300">8:00 AM TO 6:30 PM IST</div>
+                    </div>
+                </div>
+
+                <div class="flex items-center space-x-3">
+                    <div class="p-3 bg-purple-500/20 rounded-xl text-purple-300 border border-purple-400/30">
+                        <i data-lucide="map-pin"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs text-purple-300 uppercase tracking-wider">Venue</div>
+                        <div class="text-base font-bold text-white">Vishwakarma Institute of Tech</div>
+                        <div class="text-xs text-purple-300">(VIT), Upper Indira Nagar, Pune</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row items-center gap-4">
+                <button
+                    class="open-register-btn w-full sm:w-auto px-8 py-4 rounded-full bg-white/10 border border-white/20 text-white font-extrabold text-base tracking-wide hover:bg-white/20 hover:border-white/30 hover:shadow-[0_0_20px_rgba(255,255,255,0.15)] transition duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                    <span>Register For Congress</span>
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </button>
+                <a href="#agenda"
+                    class="w-full sm:w-auto px-8 py-4 rounded-full bg-purple-900/50 border border-purple-600/40 text-purple-200 font-semibold text-base hover:bg-purple-800/50 hover:text-white transition duration-300 flex items-center justify-center">
+                    Explore Agenda
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT / STATS SECTION -->
+    <section id="about" class="py-16 bg-[#160426] border-y border-purple-900/50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <span class="text-amber-400 font-semibold text-sm tracking-widest uppercase">THE CENTRAL IDEA</span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-2 mb-4">
+                    "Don't find a job. <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-amber-500 underline decoration-amber-500">Create
+                        one.</span>"
+                </h2>
+                <p class="text-purple-200 text-base sm:text-lg leading-relaxed">
+                    IEEE Pune Section Student Congress 2026 is built to give students what classrooms rarely teach: real
+                    industry exposure in 2026, hands-on builder skills, and a mindset shift from passive candidate to
+                    active creator.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-6 rounded-2xl bg-purple-950/40 border border-purple-800/40 backdrop-blur-sm">
+                    <div class="text-3xl sm:text-4xl font-black text-amber-400">300+</div>
+                    <div class="text-xs sm:text-sm text-purple-300 mt-1 uppercase font-medium">Delegates</div>
+                </div>
+                <div class="p-6 rounded-2xl bg-purple-950/40 border border-purple-800/40 backdrop-blur-sm">
+                    <div class="text-3xl sm:text-4xl font-black text-amber-400">5</div>
+                    <div class="text-xs sm:text-sm text-purple-300 mt-1 uppercase font-medium">Parallel Tracks</div>
+                </div>
+                <div class="p-6 rounded-2xl bg-purple-950/40 border border-purple-800/40 backdrop-blur-sm">
+                    <div class="text-3xl sm:text-4xl font-black text-amber-400">3</div>
+                    <div class="text-xs sm:text-sm text-purple-300 mt-1 uppercase font-medium">Hands-on Labs</div>
+                </div>
+                <div class="p-6 rounded-2xl bg-purple-950/40 border border-purple-800/40 backdrop-blur-sm">
+                    <div class="text-3xl sm:text-4xl font-black text-amber-400">5</div>
+                    <div class="text-xs sm:text-sm text-purple-300 mt-1 uppercase font-medium">Founders Under 23</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AGENDA TIMELINE SECTION -->
+    <section id="agenda" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="text-amber-400 font-bold text-xs tracking-widest uppercase">CONGRESS AT A GLANCE</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Iterative Event Agenda</h2>
+            <p class="text-purple-300 text-sm sm:text-base mt-2">October 31st, 2026 — Packed 1-Day Schedule at VIT Pune
+            </p>
+
+            <div id="agenda-filter-buttons" class="flex flex-wrap justify-center gap-2 mt-8">
+                <button
+                    class="agenda-tab px-4 py-2 rounded-full text-xs font-semibold capitalize transition bg-amber-400 text-purple-950"
+                    data-filter="all">All</button>
+                <button
+                    class="agenda-tab px-4 py-2 rounded-full text-xs font-semibold capitalize transition bg-purple-900/40 text-white"
+                    data-filter="keynote">Keynote</button>
+                <button
+                    class="agenda-tab px-4 py-2 rounded-full text-xs font-semibold capitalize transition bg-purple-900/40 text-white"
+                    data-filter="tracks">Tracks</button>
+                <button
+                    class="agenda-tab px-4 py-2 rounded-full text-xs font-semibold capitalize transition bg-purple-900/40 text-white"
+                    data-filter="workshops">Workshops</button>
+                <button
+                    class="agenda-tab px-4 py-2 rounded-full text-xs font-semibold capitalize transition bg-purple-900/40 text-white"
+                    data-filter="break">Break</button>
+            </div>
+        </div>
+
+        <div class="max-w-4xl mx-auto space-y-4" id="agenda-list-container">
+            <!-- Dynamically inserted by script.js -->
+        </div>
+    </section>
+
+    <!-- PARALLEL TRACKS SECTION -->
+    <section id="tracks" class="py-20 bg-[#160426] border-t border-purple-900/50 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-14">
+                <span
+                    class="px-3 py-1 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-400 font-mono text-xs font-bold uppercase">
+                    11:00 AM – 12:30 PM
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">5 Parallel Technical Tracks</h2>
+                <p class="text-purple-300 text-sm sm:text-base mt-2 max-w-2xl mx-auto">
+                    Choose one track based on your interest. No prerequisites—open to tech and non-tech students alike.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="tracks-container">
+                <!-- Dynamically inserted by script.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- WORKSHOPS SECTION -->
+    <section id="workshops" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-14">
+            <span
+                class="px-3 py-1 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-400 font-mono text-xs font-bold uppercase">
+                1:45 PM – 3:00 PM
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">3 Hands-on Interactive Labs</h2>
+            <p class="text-purple-300 text-sm sm:text-base mt-2">No slides-only sessions. Every student builds or
+                creates something by the end.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="workshops-container">
+            <!-- Dynamically inserted by script.js -->
+        </div>
+    </section>
+
+    <!-- ORIGIN STORIES SECTION -->
+    <section id="origin-stories" class="py-20 bg-[#160426] border-t border-purple-900/50 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-14">
+                <span class="text-amber-400 font-bold text-xs tracking-widest uppercase">SPECIAL FEATURE SESSION</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Origin Stories: 5 Founders Under 23</h2>
+                <p class="text-purple-300 text-sm sm:text-base mt-2 max-w-2xl mx-auto">
+                    5 young startup founders under 23 share what they built, mistakes made, and practical takeaways.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="founders-container">
+                <!-- Dynamically inserted by script.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer
+        class="bg-purple-950 border-t border-purple-900/60 py-12 px-4 sm:px-6 lg:px-8 text-center text-xs text-purple-300">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                <p class="font-bold text-white">IEEE Pune Section Student Congress 2026</p>
+                <p class="mt-1">Vishwakarma Institute of Technology (VIT), Pune</p>
+            </div>
+            <p class="text-purple-400">© 2026 IEEE Pune Section. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- REGISTRATION MODAL -->
+    <div id="register-modal"
+        class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+        <div
+            class="bg-[#1a062b] border border-purple-700/60 rounded-3xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl max-h-[90vh] overflow-y-auto">
+
+            <!-- CLEAN MODAL HEADER -->
+            <div class="flex items-start justify-between mb-6 pb-2 border-b border-purple-800/40">
+                <div>
+                    <h3 class="text-2xl font-extrabold text-white">Congress Delegate Registration</h3>
+                    <p class="text-xs text-purple-300 mt-0.5">Secure your seat for October 31st, 2026 at VIT Pune.</p>
+                </div>
+                <button id="close-modal-btn" type="button"
+                    class="p-2 text-purple-300 hover:text-white rounded-full bg-purple-900/50 hover:bg-purple-800 transition shrink-0 ml-2">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <!-- REGISTRATION FORM -->
+            <div id="form-view">
+                <form id="registration-form" class="space-y-4 text-left">
+                    <div>
+                        <label class="block text-xs font-semibold text-purple-200 mb-1">Full Name *</label>
+                        <input type="text" id="input-fullname" required placeholder="e.g. Rahul Sharma"
+                            class="w-full bg-purple-950/80 border border-purple-800 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-amber-400" />
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-purple-200 mb-1">Email Address *</label>
+                            <input type="email" id="input-email" required placeholder="name@college.edu"
+                                class="w-full bg-purple-950/80 border border-purple-800 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-amber-400" />
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-purple-200 mb-1">Phone Number *</label>
+                            <input type="tel" id="input-phone" required placeholder="+91 98765 43210"
+                                class="w-full bg-purple-950/80 border border-purple-800 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-amber-400" />
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-purple-200 mb-1">College / Institution
+                                *</label>
+                            <input type="text" id="input-college" required placeholder="Name of your college"
+                                class="w-full bg-purple-950/80 border border-purple-800 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-amber-400" />
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-purple-200 mb-1">IEEE Member ID
+                                (Optional)</label>
+                            <input type="text" id="input-ieeeid" placeholder="00000 00000"
+                                class="w-full bg-purple-950/80 border border-purple-800 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-amber-400" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-purple-200 mb-1">Preferred Technical
+                            Track</label>
+                        <select id="select-track"
+                            class="w-full bg-purple-950/80 border border-purple-800 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-amber-400">
+                            <!-- Dynamically populated -->
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-purple-200 mb-1">Preferred Hands-on
+                            Workshop</label>
+                        <select id="select-workshop"
+                            class="w-full bg-purple-950/80 border border-purple-800 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-amber-400">
+                            <!-- Dynamically populated -->
+                        </select>
+                    </div>
+
+                    <button type="submit" id="submit-btn"
+                        class="w-full mt-4 py-3.5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-purple-950 font-extrabold text-sm hover:shadow-[0_0_20px_rgba(245,184,0,0.5)] transition flex items-center justify-center gap-2">
+                        <span>Confirm Registration</span>
+                        <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+                    </button>
+                </form>
+            </div>
+
+            <!-- SUCCESS CONFIRMATION VIEW -->
+            <div id="success-view" class="hidden text-center py-8">
+                <div
+                    class="w-16 h-16 bg-emerald-500/20 border border-emerald-400 text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i data-lucide="check" class="w-8 h-8"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-2">You're Registered!</h3>
+                <p class="text-xs sm:text-sm text-purple-300 mb-6">
+                    Your seat for IEEE Pune Section Student Congress 2026 has been confirmed. Email sent to <strong
+                        id="confirmed-email" class="text-amber-400"></strong>.
+                </p>
+                <button id="close-success-btn"
+                    class="px-6 py-2.5 rounded-full bg-purple-900 text-white font-semibold text-xs border border-purple-600">
+                    Close Window
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,255 @@
+/* Custom CSS styling rules */
+
+/* Active tab state for Agenda filters */
+.agenda-tab.active {
+    background-color: #f59e0b;
+    /* Tailwind amber-500 */
+    color: #1e0832;
+    font-weight: 700;
+}
+
+.agenda-tab:not(.active) {
+    background-color: rgba(88, 28, 135, 0.4);
+    color: #d8b4fe;
+}
+
+.agenda-tab:not(.active):hover {
+    background-color: rgba(107, 33, 168, 0.4);
+}
+
+/* Custom logo sizing (when logo.png is supplied) */
+#custom-logo {
+    max-height: 42px;
+    width: auto;
+}
+
+/* Custom CSS styling rules */
+
+/* Custom CSS styling rules */
+
+/* 1. Ensure the parent section/container allows full width */
+.hero-logo-wrapper,
+.hero-content {
+    width: 100%;
+    max-width: 100%;
+    /* Removes restricted container bounds */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    /* Keeps a small safe margin from screen edges */
+}
+
+/* 2. Scaled Hero Logo Image */
+.hero-logo-img {
+    width: 90vw;
+    /* Uses 90% of the viewport width */
+    max-width: 1400px;
+    /* Increases maximum width from 1050px to 1400px */
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 1.5rem auto;
+    /* Adjust vertical spacing */
+
+    filter: brightness(0) invert(1) drop-shadow(0 10px 30px rgba(0, 0, 0, 0.8));
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    transition: transform 0.3s ease;
+}
+
+.hero-logo-img:hover {
+    transform: scale(1.02);
+}
+
+/* 1. Reduce bottom spacing on the logo image */
+.hero-logo-img {
+    margin-top: 1rem !important;
+    margin-bottom: 0.5rem !important;
+    /* Reduces space under the logo */
+}
+
+/* 2. Target the subheading container to move it upwards */
+.subheading-container,
+.hero-subheading {
+    margin-top: -1rem;
+    /* Pulls the subheading closer to the logo */
+    padding-top: 0;
+}
+
+/* Target the subheading text wrapper */
+.subheading-container,
+.hero-text-block {
+    margin-top: -3.5rem !important;
+    /* Adjust between -2.5rem and -4.5rem to taste */
+    position: relative;
+    z-index: 10;
+}
+
+.hero-logo-img {
+    display: block !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* If the parent container uses flexbox or grid */
+.hero-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0 !important;
+    /* Set layout gap to zero */
+}
+
+.logo-crop-wrapper {
+    overflow: hidden;
+    margin-bottom: -100px;
+    /* Cuts off transparent padding at the bottom of the image */
+}
+
+/* 3. If using flexbox / gap on the main wrapper */
+.hero-section-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem !important;
+    /* Shrinks vertical gaps between all elements */
+}
+
+/* Active tab state for Agenda filters */
+.agenda-tab.active {
+    background-color: #f59e0b;
+    color: #1e0832;
+    font-weight: 700;
+}
+
+.agenda-tab:not(.active) {
+    background-color: rgba(30, 41, 59, 0.6);
+    color: #94a3b8;
+}
+
+.agenda-tab:not(.active):hover {
+    background-color: rgba(51, 65, 85, 0.8);
+}
+
+/* Outer container spacing */
+.partner-bar-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+}
+
+/* White Pill-Shaped Capsule Banner */
+.partner-bar {
+    background-color: #ffffff;
+    border-radius: 9999px;
+    /* Fully rounded capsule pill shape */
+    padding: 0.85rem 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.75rem;
+    max-width: 1100px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    overflow-x: auto;
+    /* Handles responsiveness on smaller screens */
+    scrollbar-width: none;
+    /* Hide scrollbar Firefox */
+}
+
+.partner-bar::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar Chrome/Safari */
+}
+
+/* Individual Logo Styles */
+.partner-logo {
+    max-height: 42px;
+    /* Set consistent height for all logos */
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    flex-shrink: 0;
+}
+
+.partner-logo:hover {
+    transform: scale(1.08);
+}
+
+.partner-bar-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    padding: 0 1rem;
+}
+
+.partner-bar {
+    background-color: #ffffff !important;
+    border-radius: 9999px;
+    padding: 1.5rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1300px;
+    width: 100%;
+    /* Static shadow, no hover change */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+    pointer-events: none;
+}
+
+.partner-bar img {
+    width: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+    pointer-events: none;
+    transform: none !important;
+    transition: none !important;
+}
+
+/* ===================================================
+   CUSTOM INDIVIDUAL LOGO SIZES (Tweak values here!)
+   =================================================== */
+
+/* 1. IEEE Pune Section (Wide text logo) */
+.logo-ieee-pune {
+    height: 100px !important;
+}
+
+/* 2. IEEE Pune Section Congress Logo */
+.logo-congress {
+    height: 100px !important;
+}
+
+/* 3. IEEE Pune Section SAC Logo (Square/Emblem icon) */
+.logo-sac {
+    height: 100px !important;
+}
+
+/* 4. IEEE Student Branch VIT Pune (Diamond shape) */
+.logo-vit-sb {
+    height: 100px !important;
+}
+
+/* 5. IEEE Young Professionals (Text + Icon) */
+.logo-yp {
+    height: 56px !important;
+}
+
+/* 6. VIT Pune Logo (Horizontal emblem) */
+.logo-vit {
+    height: 100px !important;
+}
+
+/* 7. IEEE Women in Engineering WIE (Circle/Text emblem) */
+.logo-wie {
+    height: 100px !important;
+}
