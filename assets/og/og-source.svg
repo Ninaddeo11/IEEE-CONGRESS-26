@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#d4b896" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#060606" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#ffffff" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#060606"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- Logo mark -->
+  <g transform="translate(80,72)">
+    <rect x="0.5" y="0.5" width="18" height="18" fill="none" stroke="#d4b896" stroke-opacity="0.8"/>
+    <rect x="25.5" y="0.5" width="18" height="18" fill="none" stroke="#d4b896"/>
+    <rect x="0.5" y="25.5" width="18" height="18" fill="none" stroke="#d4b896"/>
+    <rect x="25.5" y="25.5" width="18" height="18" fill="none" stroke="#d4b896" stroke-opacity="0.3"/>
+    <text x="62" y="29" font-family="monospace" font-size="18" letter-spacing="4" fill="#d4b896">IEEE PUNE SECTION</text>
+  </g>
+
+  <!-- Title -->
+  <text x="80" y="300" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="84" fill="#f2ede7">Student Congress</text>
+  <text x="80" y="392" font-family="Georgia, 'Times New Roman', serif" font-size="84" fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1">2026</text>
+
+  <!-- Divider -->
+  <line x1="80" y1="440" x2="1120" y2="440" stroke="#272727" stroke-width="1"/>
+
+  <!-- Tagline -->
+  <text x="80" y="500" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="40" fill="#d4b896">Don't find a job. Create one.</text>
+
+  <!-- Meta -->
+  <text x="80" y="560" font-family="monospace" font-size="20" letter-spacing="3" fill="#7a7a7a">OCTOBER 31, 2026  ·  PUNE, MAHARASHTRA  ·  IN-PERSON</text>
+
+  <!-- Right accent squares -->
+  <g stroke="#d4b896" fill="none">
+    <rect x="1000" y="480" width="40" height="40" stroke-opacity="0.8"/>
+    <rect x="1060" y="480" width="40" height="40" stroke-opacity="0.5"/>
+    <rect x="1000" y="540" width="40" height="40" stroke-opacity="0.5"/>
+    <rect x="1060" y="540" width="40" height="40" stroke-opacity="0.2"/>
+  </g>
+</svg>

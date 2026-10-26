@@ -1,0 +1,12 @@
+{
+  "name": "IEEE Pune Section Student Congress 2026",
+  "short_name": "Pune Congress",
+  "description": "Don't find a job. Create one. October 31, 2026 · Pune, Maharashtra.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f8fa",
+  "theme_color": "#00629b",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

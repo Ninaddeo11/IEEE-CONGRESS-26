@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://congress.ieeepune.org/sitemap.xml
