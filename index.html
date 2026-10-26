@@ -331,6 +331,7 @@
             <!-- REGISTRATION FORM -->
             <div id="form-view">
                 <form id="registration-form" class="space-y-4 text-left">
+                    <p id="registration-error" class="hidden text-sm text-red-300" role="alert"></p>
                     <div>
                         <label class="block text-xs font-semibold text-purple-200 mb-1">Full Name *</label>
                         <input type="text" id="input-fullname" required placeholder="e.g. Rahul Sharma"
@@ -398,8 +399,8 @@
                 </div>
                 <h3 class="text-2xl font-bold text-white mb-2">You're Registered!</h3>
                 <p class="text-xs sm:text-sm text-purple-300 mb-6">
-                    Your seat for IEEE Pune Section Student Congress 2026 has been confirmed. Email sent to <strong
-                        id="confirmed-email" class="text-amber-400"></strong>.
+                    Your registration has been saved for IEEE Pune Section Student Congress 2026. A confirmation email
+                    has not been sent.
                 </p>
                 <button id="close-success-btn"
                     class="px-6 py-2.5 rounded-full bg-purple-900 text-white font-semibold text-xs border border-purple-600">
@@ -410,7 +411,9 @@
         </div>
     </div>
 
-    <!-- Custom Script -->
+    <!-- Supabase public client configuration; never put service-role keys in browser code. -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
     <script src="script.js"></script>
 </body>
 

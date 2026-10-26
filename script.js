@@ -248,15 +248,26 @@ function setupEventListeners() {
     // Form Submission
     const regForm = document.getElementById('registration-form');
     if (regForm) {
-        regForm.addEventListener('submit', handleFormSubmit);
+        regForm.addEventListener('submit', event => {
+            handleFormSubmit(event).catch(error => {
+                console.error('Registration submission failed:', error);
+            });
+        });
+    }
+
+    const closeSuccessBtn = document.getElementById('close-success-btn');
+    if (closeSuccessBtn) {
+        closeSuccessBtn.addEventListener('click', closeRegistrationModal);
     }
 }
 
 function openRegistrationModal() {
     const modal = document.getElementById('register-modal');
     const formView = document.getElementById('form-view');
+    const successView = document.getElementById('success-view');
     if (modal) modal.classList.remove('hidden');
     if (formView) formView.classList.remove('hidden');
+    if (successView) successView.classList.add('hidden');
 }
 
 function closeRegistrationModal() {
@@ -282,21 +293,52 @@ function selectWorkshopAndOpenModal(wsId) {
     openRegistrationModal();
 }
 
-function handleFormSubmit(e) {
-    e.preventDefault();
+async function handleFormSubmit(event) {
+    event.preventDefault();
     const submitBtn = document.getElementById('submit-btn');
-    if (!submitBtn) return;
+    const form = document.getElementById('registration-form');
+    const errorMessage = document.getElementById('registration-error');
+    const formView = document.getElementById('form-view');
+    const successView = document.getElementById('success-view');
+    const supabaseClient = window.supabaseClient;
+    if (!submitBtn || !form || !errorMessage || !formView || !successView) return;
+
+    errorMessage.textContent = '';
+    errorMessage.classList.add('hidden');
+    if (!supabaseClient) {
+        errorMessage.textContent = 'Registration is not configured yet. Please try again later.';
+        errorMessage.classList.remove('hidden');
+        return;
+    }
 
     submitBtn.disabled = true;
-    submitBtn.innerHTML = `<span>Syncing with Database...</span>`;
+    submitBtn.innerHTML = '<span>Saving Registration...</span>';
 
-    setTimeout(() => {
+    try {
+        const { error } = await supabaseClient.from('registrations').insert({
+            full_name: document.getElementById('input-fullname').value.trim(),
+            email: document.getElementById('input-email').value.trim().toLowerCase(),
+            phone: document.getElementById('input-phone').value.trim(),
+            college: document.getElementById('input-college').value.trim(),
+            ieee_id: document.getElementById('input-ieeeid').value.trim() || null,
+            track: document.getElementById('select-track').value,
+            workshop: document.getElementById('select-workshop').value
+        });
+
+        if (error) throw error;
+
+        form.reset();
+        formView.classList.add('hidden');
+        successView.classList.remove('hidden');
+    } catch (error) {
+        console.error('Could not save registration:', error);
+        errorMessage.textContent = error.code === '23505'
+            ? 'This email address is already registered.'
+            : 'We could not save your registration. Please try again later.';
+        errorMessage.classList.remove('hidden');
+    } finally {
         submitBtn.disabled = false;
         submitBtn.innerHTML = `<span>Confirm Registration</span> <i data-lucide="check-circle-2" class="w-4 h-4"></i>`;
-
-        const formView = document.getElementById('form-view');
-        if (formView) formView.classList.add('hidden');
-
         if (window.lucide) lucide.createIcons();
-    }, 1200);
+    }
 }
