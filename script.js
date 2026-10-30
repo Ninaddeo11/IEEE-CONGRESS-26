@@ -17,17 +17,17 @@ const agendaData = [
 ];
 
 const tracksData = [
-  { id: 1, title: 'Quantum Computing - What Every Student Must Know', tag: 'Frontier Tech', desc: 'National Quantum Mission context. IBM/Google fault-tolerant race.', highlights: ['Quantum fundamentals', 'What it means for your future', 'No physics PhD required'] },
-  { id: 2, title: 'Data Science & Analytics in Practice', tag: 'Data & AI', desc: 'Real datasets, industry tools (Python, SQL, Power BI, Tableau).', highlights: ['Exploratory Data Analysis', 'Dashboarding', 'Domain-agnostic insights'] },
-  { id: 3, title: 'Product Thinking & Building for Users', tag: 'Product & Startup', desc: 'How great products are built: user research, MVP mindset, and bridging tech to business.', highlights: ['User persona mapping', 'MVP rapid validation', 'Product-market mindset'] },
-  { id: 4, title: 'Student Leadership & Personal Brand', tag: 'Career Growth', desc: 'How to lead teams when no one has to follow you and build a powerful LinkedIn/GitHub presence.', highlights: ['GitHub portfolio', 'LinkedIn authority', 'Empathetic leadership'] },
-  { id: 5, title: 'Communication, Storytelling & Public Speaking', tag: 'Soft Skills', desc: 'Craft narratives that make stakeholders care. Overcome stage fear.', highlights: ['Elevator pitch framework', 'Body language mastery', 'Persuasive storytelling'] }
+  { id: 1, title: 'Quantum Computing - What Every Student Must Know', tag: 'Frontier Tech', location: '1401', desc: 'National Quantum Mission context. IBM/Google fault-tolerant race.', highlights: ['Quantum fundamentals', 'What it means for your future', 'No physics PhD required'] },
+  { id: 2, title: 'Data Science & Analytics in Practice', tag: 'Data & AI', location: '1402', desc: 'Real datasets, industry tools (Python, SQL, Power BI, Tableau).', highlights: ['Exploratory Data Analysis', 'Dashboarding', 'Domain-agnostic insights'] },
+  { id: 3, title: 'Product Thinking & Building for Users', tag: 'Product & Startup', location: '1410', desc: 'How great products are built: user research, MVP mindset, and bridging tech to business.', highlights: ['User persona mapping', 'MVP rapid validation', 'Product-market mindset'] },
+  { id: 4, title: 'Student Leadership & Personal Brand', tag: 'Career Growth', location: '1411', desc: 'How to lead teams when no one has to follow you and build a powerful LinkedIn/GitHub presence.', highlights: ['GitHub portfolio', 'LinkedIn authority', 'Empathetic leadership'] },
+  { id: 5, title: 'Communication, Storytelling & Public Speaking', tag: 'Soft Skills', location: '1412', desc: 'Craft narratives that make stakeholders care. Overcome stage fear.', highlights: ['Elevator pitch framework', 'Body language mastery', 'Persuasive storytelling'] }
 ];
 
 const workshopsData = [
-  { id: 1, title: 'Build an AI Agent', desc: 'Students build a working AI agent using available tools and APIs. Every participant builds a functioning prototype.', badge: '100% Code & Build', icon: 'cpu', outcome: 'Working AI agent prototype' },
-  { id: 2, title: 'Android Programming', desc: 'Hands-on Android app development session led by Dr. Aniket Nagane.', badge: 'Mobile App Dev', icon: 'smartphone', outcome: 'Functional mobile application prototype' },
-  { id: 3, title: 'Design Thinking Challenge', desc: 'Led by Sarvesh Gadkari (Founder, Mulsetu Agrotech). Full design thinking process: empathize, define, ideate, prototype, test.', badge: 'Problem Solving', icon: 'compass', outcome: 'Interactive prototype & pitch presentation' }
+  { id: 1, title: 'Build an AI Agent', desc: 'Students build a working AI agent using available tools and APIs. Every participant builds a functioning prototype.', location: '1410', badge: '100% Code & Build', icon: 'cpu', outcome: 'Working AI agent prototype' },
+  { id: 2, title: 'Android Programming', desc: 'Hands-on Android app development session led by Dr. Aniket Nagane.', location: '1411', badge: 'Mobile App Dev', icon: 'smartphone', outcome: 'Functional mobile application prototype' },
+  { id: 3, title: 'Design Thinking Challenge', desc: 'Led by Sarvesh Gadkari (Founder, Mulsetu Agrotech). Full design thinking process: empathize, define, ideate, prototype, test.', location: '1412', badge: 'Problem Solving', icon: 'compass', outcome: 'Interactive prototype & pitch presentation' }
 ];
 
 const originFounders = [
@@ -103,9 +103,13 @@ function renderTracks() {
 
     el.innerHTML = `
       <div>
-        <div class="flex justify-between items-center mb-4">
+        <div class="flex justify-between items-center mb-3">
           <span class="text-xs font-bold px-3 py-1 rounded-full bg-purple-900/80 text-amber-300 border border-purple-700/50">Track ${track.id}</span>
           <span class="text-[10px] text-purple-300 font-mono uppercase">${track.tag}</span>
+        </div>
+        <div class="inline-flex items-center gap-1 text-xs text-amber-400 font-bold bg-amber-500/10 px-2.5 py-1 rounded-full border border-amber-500/20 mb-3">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+          <span>Room ${track.location}</span>
         </div>
         <h3 class="text-xl font-bold text-white mb-3 line-clamp-2">${track.title}</h3>
         <p class="text-xs sm:text-sm text-purple-200/80 mb-4 leading-relaxed">${track.desc}</p>
@@ -132,8 +136,14 @@ function renderWorkshops() {
     el.className = 'relative group bg-gradient-to-b from-[#24083d] to-purple-950/40 border border-purple-800/60 rounded-2xl p-6 hover:border-amber-400/60 transition duration-300 flex flex-col justify-between shadow-2xl';
     el.innerHTML = `
       <div>
-        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 text-purple-950 flex items-center justify-center font-bold mb-5 shadow-lg">
-          <i data-lucide="${ws.icon}"></i>
+        <div class="flex items-center justify-between mb-4">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 text-purple-950 flex items-center justify-center font-bold shadow-lg">
+            <i data-lucide="${ws.icon}"></i>
+          </div>
+          <span class="inline-flex items-center gap-1 text-xs text-amber-400 font-bold bg-amber-500/10 px-2.5 py-1 rounded-full border border-amber-500/20">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+            <span>Room ${ws.location}</span>
+          </span>
         </div>
         <span class="text-xs font-semibold px-2.5 py-1 rounded bg-purple-900/80 text-amber-300 border border-purple-700/50">${ws.badge}</span>
         <h3 class="text-xl font-bold text-white mt-3 mb-2">${ws.title}</h3>
@@ -180,12 +190,12 @@ function renderFounders() {
 function populateDropdowns() {
   const trackSelect = document.getElementById('select-track');
   if (trackSelect) {
-    trackSelect.innerHTML = tracksData.map(t => `<option value="Track ${t.id}: ${t.title}">Track ${t.id}: ${t.title}</option>`).join('');
+    trackSelect.innerHTML = tracksData.map(t => `<option value="Track ${t.id}: ${t.title} (Room ${t.location})">Track ${t.id}: ${t.title} (Room ${t.location})</option>`).join('');
   }
 
   const wsSelect = document.getElementById('select-workshop');
   if (wsSelect) {
-    wsSelect.innerHTML = workshopsData.map(w => `<option value="Workshop ${w.id}: ${w.title}">Workshop ${w.id}: ${w.title}</option>`).join('');
+    wsSelect.innerHTML = workshopsData.map(w => `<option value="Workshop ${w.id}: ${w.title} (Room ${w.location})">Workshop ${w.id}: ${w.title} (Room ${w.location})</option>`).join('');
   }
 }
 
@@ -257,7 +267,7 @@ function selectTrackAndOpenModal(trackId) {
   const track = tracksData.find(t => t.id === trackId);
   if (track) {
     const selectTrack = document.getElementById('select-track');
-    if (selectTrack) selectTrack.value = `Track ${track.id}: ${track.title}`;
+    if (selectTrack) selectTrack.value = `Track ${track.id}: ${track.title} (Room ${track.location})`;
   }
   openRegistrationModal();
 }
@@ -266,7 +276,7 @@ function selectWorkshopAndOpenModal(wsId) {
   const ws = workshopsData.find(w => w.id === wsId);
   if (ws) {
     const selectWs = document.getElementById('select-workshop');
-    if (selectWs) selectWs.value = `Workshop ${ws.id}: ${ws.title}`;
+    if (selectWs) selectWs.value = `Workshop ${ws.id}: ${ws.title} (Room ${ws.location})`;
   }
   openRegistrationModal();
 }
