@@ -5,10 +5,10 @@ const agendaData = [
   { time: '9:00 - 9:30 AM', title: 'Opening Ceremony', category: 'keynote', desc: 'Saraswati Vandana, Lamp lighting, welcome address by Dr. Abhijit Khurape & felicitation by Dr. Amar Buchade', icon: 'sparkles' },
   { time: '9:20 - 10:05 AM', title: 'Keynote Speaker 1', category: 'keynote', desc: 'Address by Mr. Praveen K. Shukla, World Records title holder | Guinness, TEDx & Speaker | Meta-Economics | Business Advisor & Mentor', icon: 'award' },
   { time: '10:05 - 10:10 AM', title: 'Vote of Thanks', category: 'keynote', desc: 'Vote of thanks by Dr. Vikas Kolekar', icon: 'check-circle-2' },
-  { time: '10:15 - 10:45 AM', title: 'Fireside Chat / YP Panel', category: 'panel', desc: 'Agenda: Future Entrepreneurs for Viksit Bharat @2047 | Panelist: Mr. Rakshit Jain & Mugdha Shah| Moderator: Tanmayi Gadge', icon: 'users' },
+  { time: '10:15 - 10:45 AM', title: 'Fireside Chat / YP Panel', category: 'panel', desc: 'Agenda: Future Entrepreneurs for Viksit Bharat @2047 | Panelist: Mr. Rakshit Jain | Moderator: Tanmayi Gadge', icon: 'users' },
   { time: '11:00 - 12:30 PM', title: '5 Parallel Technical Tracks', category: 'tracks', desc: 'Simultaneous tracks led by Prof. Umakant Rapol (IISER), Aastha Agarwal, Vedant Patil, Mugdha Shah, and Pankaj Gopalani', icon: 'cpu' },
   { time: '12:45 - 1:30 PM', title: 'Networking Lunch', category: 'break', desc: 'Complimentary buffet lunch and peer interaction', icon: 'clock' },
-  { time: '1:45 - 3:00 PM', title: '3 Parallel Hands-on Workshops', category: 'workshops', desc: 'AI Agents by Vivek Patil, Android Programming by Dr. Aniket Nagane, and Design Thinking by Sarvesh Gadkari', icon: 'rocket' },
+  { time: '1:45 - 3:00 PM', title: '3 Parallel Hands-on Workshops', category: 'workshops', desc: 'AI Agents, Android Programming by Dr. Aniket Nagane, and Design Thinking by Sarvesh Gadkari', icon: 'rocket' },
   { time: '3:15 - 4:00 PM', title: 'Student Forum & Project Showcase', category: 'forum', desc: 'Students from different Branches represent their projects', icon: 'lightbulb' },
   { time: '4:15 - 4:45 PM', title: 'Origin Stories: Top 5 Founders', category: 'keynote', desc: 'Saartha Bhandari (BIOS), Pranav Harkal (Cambunny Media), Suhani Dhadphale (Sangam India), Shubham Purandare (Studium), and Krishna Vyas (Vulcan 3D)', icon: 'award' },
   { time: '4:45 - 5:30 PM', title: 'Keynote Speaker 2', category: 'keynote', desc: 'Address by Dr. Rajiv Mitra', icon: 'award' },
@@ -25,7 +25,7 @@ const tracksData = [
 ];
 
 const workshopsData = [
-  { id: 1, title: 'Build an AI Agent', desc: 'Students build a working AI agent using available tools and APIs by Vivek Patil. Every participant builds a functioning prototype.', badge: '100% Code & Build', icon: 'cpu', outcome: 'Working AI agent prototype' },
+  { id: 1, title: 'Build an AI Agent', desc: 'Students build a working AI agent using available tools and APIs. Every participant builds a functioning prototype.', badge: '100% Code & Build', icon: 'cpu', outcome: 'Working AI agent prototype' },
   { id: 2, title: 'Android Programming', desc: 'Hands-on Android app development session led by Dr. Aniket Nagane.', badge: 'Mobile App Dev', icon: 'smartphone', outcome: 'Functional mobile application prototype' },
   { id: 3, title: 'Design Thinking Challenge', desc: 'Led by Sarvesh Gadkari (Founder, Mulsetu Agrotech). Full design thinking process: empathize, define, ideate, prototype, test.', badge: 'Problem Solving', icon: 'compass', outcome: 'Interactive prototype & pitch presentation' }
 ];
