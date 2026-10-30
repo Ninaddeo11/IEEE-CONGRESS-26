@@ -15,7 +15,7 @@ create table if not exists public.registrations (
     )),
     workshop text not null check (workshop in (
         'Workshop 1: Build an AI Agent',
-        'Workshop 2: Cyber CTF Lab',
+        'Workshop 2: Android Programming',
         'Workshop 3: Design Thinking Challenge'
     )),
     status text not null default 'confirmed' check (status in ('confirmed', 'cancelled'))
