@@ -113,8 +113,6 @@
             class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-72 bg-gradient-to-r from-purple-600/20 via-pink-600/30 to-amber-500/20 blur-3xl pointer-events-none rounded-full">
         </div>
 
-
-
         <div class="flex flex-col items-center justify-center gap-1">
             <!-- CUSTOM CONGRESS LOGO ARTWORK -->
             <div class="relative mt-0 mb-0 py-0 w-full max-w-3xl px-18 flex justify-center">
@@ -217,7 +215,8 @@
         <div class="text-center mb-12">
             <span class="text-amber-400 font-bold text-xs tracking-widest uppercase">CONGRESS AT A GLANCE</span>
             <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Iterative Event Agenda</h2>
-            <p class="text-purple-300 text-sm sm:text-base mt-2">October 31st, 2026 — Packed 1-Day Schedule at VIT Pune
+            <p class="text-purple-300 text-sm sm:text-base mt-2">October 31st, 2026 — Packed 1-Day Schedule at VIT
+                Pune[cite: 2, 3]
             </p>
 
             <div id="agenda-filter-buttons" class="flex flex-wrap justify-center gap-2 mt-8">
@@ -250,11 +249,12 @@
             <div class="text-center mb-14">
                 <span
                     class="px-3 py-1 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-400 font-mono text-xs font-bold uppercase">
-                    11:00 AM – 12:30 PM
+                    11:00 AM – 12:30 PM[cite: 4, 5]
                 </span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">5 Parallel Technical Tracks</h2>
                 <p class="text-purple-300 text-sm sm:text-base mt-2 max-w-2xl mx-auto">
-                    Choose one track based on your interest. No prerequisites—open to tech and non-tech students alike.
+                    Choose one track based on your interest. No prerequisites—open to tech and non-tech students
+                    alike[cite: 4, 5].
                 </p>
             </div>
 
@@ -269,11 +269,11 @@
         <div class="text-center mb-14">
             <span
                 class="px-3 py-1 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-400 font-mono text-xs font-bold uppercase">
-                1:45 PM – 3:00 PM
+                1:45 PM – 3:00 PM[cite: 2, 5]
             </span>
             <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">3 Hands-on Interactive Labs</h2>
             <p class="text-purple-300 text-sm sm:text-base mt-2">No slides-only sessions. Every student builds or
-                creates something by the end.</p>
+                creates something by the end[cite: 5].</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="workshops-container">
@@ -286,9 +286,11 @@
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-14">
                 <span class="text-amber-400 font-bold text-xs tracking-widest uppercase">SPECIAL FEATURE SESSION</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Origin Stories: 5 Founders Under 23</h2>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Origin Stories: 5 Founders Under
+                    23[cite: 4]</h2>
                 <p class="text-purple-300 text-sm sm:text-base mt-2 max-w-2xl mx-auto">
-                    5 young startup founders under 23 share what they built, mistakes made, and practical takeaways.
+                    5 young startup founders under 23 share what they built, mistakes made, and practical
+                    takeaways[cite: 3, 4].
                 </p>
             </div>
 
@@ -320,7 +322,8 @@
             <div class="flex items-start justify-between mb-6 pb-2 border-b border-purple-800/40">
                 <div>
                     <h3 class="text-2xl font-extrabold text-white">Congress Delegate Registration</h3>
-                    <p class="text-xs text-purple-300 mt-0.5">Secure your seat for October 31st, 2026 at VIT Pune.</p>
+                    <p class="text-xs text-purple-300 mt-0.5">Secure your seat for October 31st, 2026 at VIT Pune[cite:
+                        2].</p>
                 </div>
                 <button id="close-modal-btn" type="button"
                     class="p-2 text-purple-300 hover:text-white rounded-full bg-purple-900/50 hover:bg-purple-800 transition shrink-0 ml-2">
@@ -331,7 +334,6 @@
             <!-- REGISTRATION FORM -->
             <div id="form-view">
                 <form id="registration-form" class="space-y-4 text-left">
-                    <p id="registration-error" class="hidden text-sm text-red-300" role="alert"></p>
                     <div>
                         <label class="block text-xs font-semibold text-purple-200 mb-1">Full Name *</label>
                         <input type="text" id="input-fullname" required placeholder="e.g. Rahul Sharma"
@@ -399,8 +401,8 @@
                 </div>
                 <h3 class="text-2xl font-bold text-white mb-2">You're Registered!</h3>
                 <p class="text-xs sm:text-sm text-purple-300 mb-6">
-                    Your registration has been saved for IEEE Pune Section Student Congress 2026. A confirmation email
-                    has not been sent.
+                    Your seat for IEEE Pune Section Student Congress 2026 has been confirmed. Email sent to <strong
+                        id="confirmed-email" class="text-amber-400"></strong>.
                 </p>
                 <button id="close-success-btn"
                     class="px-6 py-2.5 rounded-full bg-purple-900 text-white font-semibold text-xs border border-purple-600">
@@ -411,9 +413,7 @@
         </div>
     </div>
 
-    <!-- Supabase public client configuration; never put service-role keys in browser code. -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="supabase-config.js"></script>
+    <!-- Custom Script -->
     <script src="script.js"></script>
 </body>
 
